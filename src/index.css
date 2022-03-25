@@ -5,9 +5,87 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #e4e4e4;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.card-wrapper {
+	margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 1rem;
 }
+
+.card-wrapper .info {
+	display: inline-block;
+  width: 320px;
+  text-align: center;
+}
+
+.card-wrapper .info .name {
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+.card-wrapper img {
+  width: 325px;
+  min-height: 566px;
+}
+
+.card-wrapper button {
+	width: 40%;
+}
+
+.header {
+	font-size: 1.5rem;
+	margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: #7bbcf8;
+  padding: 0.4rem 0;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.header-picture {
+  border-radius: 8px;
+  opacity: 0.7;
+}
+
+.content {
+  margin-left: 1rem;
+}
+
+.content p {
+  font-size: 1.5rem;
+}
+
+.block-anuncio {
+  display: flex;
+  justify-content: center;
+}
+
+.block-equipamiento {
+  display: flex;
+  justify-content: center;
+}
+
+.block-gallery {
+  display: flex;
+  justify-content: center;
+}
+
+.block-controls {
+  display: flex;
+  justify-content: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
+	width: 320px;
+}
+

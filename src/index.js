@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App title="Volkswagen Transporter" subtitle="campervan"/>
   </React.StrictMode>,
   document.getElementById('root')
 );
