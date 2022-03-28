@@ -1,10 +1,9 @@
 import React from 'react'
+import { Gallery } from './components/Gallery'
+import { Equipamiento } from './components/Equipamiento'
+import { Header } from './components/Header'
 
 
-import { Header } from './pages/header'
-import { Equipamiento } from './pages/equipamiento'
-
-import { Gallery } from './components/gallery'
 
 const data = [
   {

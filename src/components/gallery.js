@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { CardList } from "./CardList";
+import { VideoCard } from "./VideoCard";
 
-import { CardList } from "./cardlist";
-import { VideoCard } from "./videocard";
 
 export const Gallery = (props) => {
     const [index, changePicture] = useState(0)

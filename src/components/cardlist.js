@@ -1,4 +1,4 @@
-import { ImageCard } from './imagecard'
+import { ImageCard } from './ImageCard'
 
 export const CardList = (props) => {
   if (
