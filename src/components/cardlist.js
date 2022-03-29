@@ -1,4 +1,5 @@
 import { ImageCard } from './ImageCard'
+import { VideoCard } from './VideoCard'
 
 export const CardList = (props) => {
   if (
@@ -13,7 +14,9 @@ export const CardList = (props) => {
     <div>
       {props.pictures.map((nodrizaPicture, index) => (
         <div key={index}>
-          <ImageCard {...nodrizaPicture} index={index} />
+          {nodrizaPicture.resourceType === "video" 
+            ? <VideoCard {...nodrizaPicture} index={index} /> 
+            : <ImageCard {...nodrizaPicture} index={index} />}
         </div>
       ))}
     </div>
