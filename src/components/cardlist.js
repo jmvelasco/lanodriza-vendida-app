@@ -1,5 +1,5 @@
-import { ImageCard } from './ImageCard'
-import { VideoCard } from './VideoCard'
+import { ImageCard } from './ImageCard';
+import { VideoCard } from './VideoCard';
 
 export const CardList = (props) => {
   if (
@@ -12,11 +12,11 @@ export const CardList = (props) => {
 
   return (
     <div>
-      {props.pictures.map((nodrizaPicture, index) => (
+      {props.pictures.map((picture, index) => (
         <div key={index}>
-          {nodrizaPicture.resourceType === "video" 
-            ? <VideoCard {...nodrizaPicture} index={index} /> 
-            : <ImageCard {...nodrizaPicture} index={index} />}
+          {picture.resourceType === "video" 
+            ? <VideoCard picture={picture} index={index}  /> 
+            : <ImageCard {...picture} index={index} />}
         </div>
       ))}
     </div>

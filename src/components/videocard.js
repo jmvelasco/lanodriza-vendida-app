@@ -1,8 +1,15 @@
 import React, {useRef} from 'react';
 
 export const VideoCard = (props) => {
-  const { resourcePath, name, description, display} = props
-  const videoElementRef = useRef(null);
+  const { 
+    resourcePath, 
+    name, 
+    description, 
+    display,
+  } = props.picture
+
+  const inputRef = useRef(null);
+  props.picture.inputRef = inputRef;
   
   return (
     <div className="card-wrapper" style={{ display }}>
@@ -12,7 +19,7 @@ export const VideoCard = (props) => {
           {description}
         </div>
       </div>
-      <video ref={videoElementRef} width="320px" controls>
+      <video ref={inputRef} width="320px" controls>
         <source src={resourcePath} type="video/mp4" />
         Your browser does not support the video tag.
       </video>

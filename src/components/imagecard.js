@@ -1,8 +1,14 @@
 export const ImageCard = (props) => {
-  const { resourcePath, name, description, display, inputRef } = props
+  const { 
+    resourcePath, 
+    name, 
+    description, 
+    display
+  } = props;
+  
   return (
     <div className="card-wrapper" style={{ display }}>
-      <img ref={inputRef} src={resourcePath} alt={name} />
+      <img src={resourcePath} alt={name} />
       <div className="info">
         <div className="name">{name}</div>
         <div className="company">{description}</div>
