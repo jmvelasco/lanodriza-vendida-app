@@ -1,32 +1,33 @@
-import React, { useState } from 'react'
-import { CardList } from './CardList'
+import React, { useState } from 'react';
+import { CardList } from './CardList';
 
 export const Gallery = (props) => {
-  const [index, changePicture] = useState(0)
+  const [index, changePicture] = useState(0);
+  const [videoRef, setVideoRef] = useState(null);
 
-  const resetVideo = (videoElem) => {
-    videoElem.pause()
-    videoElem.currentTime = 0
+  const resetVideo = () => {
+    videoRef.current.pause();
+    videoRef.current.currentTime = 0;
   }
 
   const previousPicture = () => {
     if ('video' === props.pictures[index].resourceType) {
-      resetVideo(props.pictures[index].inputRef.current)
+      resetVideo();
     }
-    changePicture(index === 0 ? index : index - 1)
+    changePicture(index === 0 ? index : index - 1);
   }
 
   const nextPicture = () => {
     if ('video' === props.pictures[index].resourceType) {
-      resetVideo(props.pictures[index].inputRef.current)
+      resetVideo();
     }
-    changePicture(index >= props.pictures.length - 1 ? index : index + 1)
+    changePicture(index >= props.pictures.length - 1 ? index : index + 1);
   }
 
   return (
     <div className="block-gallery">
       <div>
-        <CardList pictures={props.pictures} displayIndex={index} />
+        <CardList pictures={props.pictures} displayIndex={index} setVideoRef={(ref)=>{setVideoRef(ref)}}/>
         <div className="block-controls">
           <div className="controls">
             <button onClick={previousPicture}>Anterior</button>
