@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, {useRef} from 'react';
 
 export const VideoCard = (props) => {
   const { 
@@ -6,10 +6,10 @@ export const VideoCard = (props) => {
     name, 
     description, 
     display,
-  } = props.picture;
+  } = props.picture
 
   const inputRef = useRef(null);
-  useEffect(() => {props.setVideoRef(inputRef)}, [inputRef, props]);
+  props.picture.inputRef = inputRef;
   
   return (
     <div className="card-wrapper" style={{ display }}>

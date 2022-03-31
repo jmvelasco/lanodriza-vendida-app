@@ -1,4 +1,3 @@
-import React from 'react';
 import { ImageCard } from './ImageCard';
 import { VideoCard } from './VideoCard';
 
@@ -16,7 +15,7 @@ export const CardList = (props) => {
       {props.pictures.map((picture, index) => (
         <div key={index}>
           {picture.resourceType === "video" 
-            ? <VideoCard picture={picture} index={index} setVideoRef={props.setVideoRef} /> 
+            ? <VideoCard picture={picture} index={index}  /> 
             : <ImageCard {...picture} index={index} />}
         </div>
       ))}
