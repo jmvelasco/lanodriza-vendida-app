@@ -2,8 +2,8 @@ export const Equipamiento = () => {
   return (
     <div className="content">
       <p className="block-anuncio">
-        Se vende furgoneta Volkswagen Transporter convertida en campervan
-        homologada.
+        Se vende Volkswagen Transporter<br/>
+        convertida en campervan homologada.
       </p>
       <div className="block-equipamiento">
         <ul>

@@ -15,7 +15,7 @@ export const VideoCard = (props) => {
     <div className="card-wrapper" style={{ display }}>
       <div className="info">
         <div className="name">{name}</div>
-        <div className="company">
+        <div className="description">
           {description}
         </div>
       </div>
