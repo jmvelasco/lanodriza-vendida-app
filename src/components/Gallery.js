@@ -27,13 +27,13 @@ export const Gallery = (props) => {
   return (
     <div className="block-gallery">
       <div>
-        <CardList pictures={props.pictures} displayIndex={index} setVideoRef={(ref)=>{setVideoRef(ref)}}/>
         <div className="block-controls">
           <div className="controls">
-            <button onClick={previousPicture}>Anterior</button>
-            <button onClick={nextPicture}>Siguiente</button>
+            <button onClick={previousPicture}> &#60;&#60; </button>
+            <button onClick={nextPicture}> &#62;&#62; </button>
           </div>
         </div>
+        <CardList pictures={props.pictures} displayIndex={index} setVideoRef={(ref)=>{setVideoRef(ref)}}/>
       </div>
     </div>
   )

@@ -9,17 +9,18 @@ body {
 }
 
 .card-wrapper {
-	margin: 1rem;
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
-  padding: 1rem;
+  min-height: 700px;
 }
 
 .card-wrapper .info {
 	display: inline-block;
   width: 320px;
   text-align: center;
+  margin-bottom: 0.4rem;
+  background-color: #e4e4e4;
+  border-radius: 0.4rem;
 }
 
 .card-wrapper .info .name {
@@ -54,8 +55,17 @@ body {
   opacity: 0.7;
 }
 
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  
+}
+
 .content {
   margin-left: 1rem;
+  background-color: #333;
+  color: #e4e4e4;
+  padding: 0 1rem;
 }
 
 .content p {
@@ -72,10 +82,14 @@ body {
   justify-content: center;
 }
 
+
 .block-gallery {
   display: flex;
   justify-content: center;
+  background-color: #fff;
+  padding: 0 1rem;
 }
+
 
 .block-controls {
   display: flex;
@@ -85,7 +99,16 @@ body {
 .controls {
   display: flex;
   justify-content: space-around;
-  margin: 1rem 0;
+  margin: 0.4rem 0;
 	width: 320px;
 }
 
+.controls button {
+  border: 0 none;
+  font-size: 2rem;
+  background-color: #fff;
+}
+
+.controls button:hover {
+  cursor: pointer;
+}

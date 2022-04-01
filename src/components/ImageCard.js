@@ -8,11 +8,11 @@ export const ImageCard = (props) => {
   
   return (
     <div className="card-wrapper" style={{ display }}>
-      <img src={resourcePath} alt={name} />
       <div className="info">
         <div className="name">{name}</div>
-        <div className="company">{description}</div>
+        <div className="description">{description}</div>
       </div>
+      <img src={resourcePath} alt={name} />
     </div>
   )
 }

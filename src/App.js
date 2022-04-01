@@ -9,8 +9,10 @@ const App = (props) => {
   return (
     <div>
       <Header title={props.title} subtitle={props.subtitle}/>
-      <Equipamiento />
-      <Gallery pictures={data} />
+      <div className='content-wrapper'>
+        <Equipamiento />
+        <Gallery pictures={data} />
+      </div>
     </div>
   )
 }
