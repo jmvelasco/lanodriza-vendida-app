@@ -1,42 +1,22 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useState } from 'react'
 
 export const VideoCard = (props) => {
-  const { 
-    resourcePath, 
-    name, 
-    description, 
-    display,
-  } = props.picture;
-  
-  const inputRef = useRef(null);
-
-  const resetVideo = (videoRef) => {
-    videoRef.current.pause();
-    videoRef.current.currentTime = 0;
-  }
+  const [videoCardProps, receiveNewProps] = useState(props);
 
   useEffect(() => {
-    return () => {
-      resetVideo(inputRef);
-    }
-  });
-  
+    receiveNewProps(props);
+  }, [receiveNewProps, props]);
+
   return (
-    <div className="card-wrapper" style={{ display }}>
+    <div className="card-wrapper">
       <div className="info">
-        <div className="name">{name}</div>
-        <div className="description">
-          {description}
-        </div>
+        <div className="name">{videoCardProps.name}</div>
+        <div className="description">{videoCardProps.description}</div>
       </div>
-      <video ref={inputRef} width="320px" controls>
-        <source src={resourcePath} type="video/mp4" />
+      <video width="320px" controls>
+        <source src={videoCardProps.resourcePath} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
   )
 }
-
-
-
-
