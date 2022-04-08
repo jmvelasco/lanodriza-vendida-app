@@ -7,9 +7,19 @@ export const VideoCard = (props) => {
     description, 
     display,
   } = props.picture;
-
+  
   const inputRef = useRef(null);
-  useEffect(() => {props.setVideoRef(inputRef)}, [inputRef, props]);
+
+  const resetVideo = (videoRef) => {
+    videoRef.current.pause();
+    videoRef.current.currentTime = 0;
+  }
+
+  useEffect(() => {
+    return () => {
+      resetVideo(inputRef);
+    }
+  });
   
   return (
     <div className="card-wrapper" style={{ display }}>
