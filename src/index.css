@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #e4e4e4;
+  background-color: #fff;
 }
 
 .card-wrapper {
@@ -16,11 +16,12 @@ body {
 
 .card-wrapper .info {
 	display: inline-block;
-  width: 320px;
+  width: 360px;
   text-align: center;
   margin-bottom: 0.4rem;
   background-color: #e4e4e4;
   border-radius: 0.4rem;
+  
 }
 
 .card-wrapper .info .name {
@@ -28,9 +29,17 @@ body {
 	font-weight: bold;
 }
 
-.card-wrapper img {
+.card-wrapper .info .description {
+	margin-bottom: 0.6rem;
+}
+
+.card-wrapper img, 
+.card-wrapper video {
   width: 325px;
-  min-height: 566px;
+  /* min-height: 566px; */
+  padding: 1rem;
+  border: 1px solid #e4e4e4;
+  border-radius: 1rem;
 }
 
 .card-wrapper button {
@@ -58,6 +67,8 @@ body {
 .content-wrapper {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem 0;
   
 }
 
