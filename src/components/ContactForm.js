@@ -25,10 +25,10 @@ export const ContactForm = () => {
       emailService.PUBLIC_KEY,
     ).then(
       (result) => {
-        alert('Message Sent, We will get back to you shortly', result.text)
+        alert('Mensaje mandado', result.text)
       },
       (error) => {
-        alert('An error occurred, Please try again', error.text)
+        alert('Ha habido un error y el mensaje no se ha enviado', error.text)
       },
     )
   }
