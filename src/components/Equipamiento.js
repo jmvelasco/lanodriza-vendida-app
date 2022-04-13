@@ -23,6 +23,10 @@ export const Equipamiento = () => {
           <li>Toldo y lateral Fiamma</li>
         </ul>
       </div>
+      <div className="block-precio">
+        <span>Precio: 3300 €</span>
+        <span><img width={24} src="/email.png" alt="" /><a href="mailto: jmanuel.velasco@gmail.com">contactar</a></span>
+      </div>
     </div>
   )
 }
