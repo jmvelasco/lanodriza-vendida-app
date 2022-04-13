@@ -6,9 +6,11 @@ export const CardList = (props) => {
 
   return (
     <div>
-      {pictures[displayIndex].resourceType === 'video' 
-        ? <VideoCard {...pictures[displayIndex]} />
-        : <ImageCard {...pictures[displayIndex]} />}
+      {pictures[displayIndex].resourceType === 'video' ? (
+        <VideoCard {...pictures[displayIndex]} />
+      ) : (
+        <ImageCard {...pictures[displayIndex]} />
+      )}
     </div>
   )
 }
